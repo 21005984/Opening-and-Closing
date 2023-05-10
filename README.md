@@ -18,7 +18,10 @@ Apply erosion and dilation using cv2.MORPH_OPEN and cv2.MORPH_CLOSE.
 ### Step5:
 Plot the images using plt.imshow.
 ## Program:
-
+~~~
+DEVELOPED BY : Meiyarasi.V
+REGISTER NUMBER : 212221230058
+~~~
 ``` Python
 # Import the necessary packages
 import cv2
