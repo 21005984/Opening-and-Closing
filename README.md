@@ -34,7 +34,7 @@ plt.imshow(input_img)
 plt.axis('off')
 # Create the structuring element
 
-kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(7,7))
+kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(21,21))
 
 # Use Opening operation
 
@@ -59,11 +59,11 @@ plt.axis('on')
 
 ### Display the result of Opening
 
-![output](w2.png)
+![output](q2.png)
 
 ### Display the result of Closing
 
-![output](w3.png)
+![output](q3.png)
 
 ## Result
 Thus the Opening and Closing operation is used in the image using python and OpenCV.
