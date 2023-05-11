@@ -28,47 +28,42 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Create the Text using cv2.putText
-
-text_image = np.zeros((100,850),dtype = 'uint8')
-font = cv2.FONT_HERSHEY_SIMPLEX = 3
-cv2.putText(text_image," MEIYARASI VADIVEL",(10,70),font,2,(255),4,cv2.LINE_AA)
-plt.title("Original Image")
-plt.imshow(text_image,'magma')
+# Display the Original image
+input_img = cv2.imread('uc.png')
+plt.imshow(input_img)
 plt.axis('off')
-
 # Create the structuring element
 
 kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(7,7))
 
 # Use Opening operation
 
-image1=cv2.morphologyEx(text_image,cv2.MORPH_OPEN,kernel)
+image_mei = cv2.morphologyEx(input_img,cv2.MORPH_OPEN,kernel_mei)
 plt.title("Opening")
-plt.imshow(image1,'magma')
-plt.axis('off')
+plt.imshow(image_mei,'magma')
+plt.axis('on')
 
 # Use Closing Operation
 
-image2=cv2.morphologyEx(text_image,cv2.MORPH_CLOSE,kernel)
+image_mei1 = cv2.morphologyEx(input_img,cv2.MORPH_CLOSE,kernel1)
 plt.title("Closing")
-plt.imshow(image2,'magma')
-plt.axis('off')
+plt.imshow(image_mei1,'magma')
+plt.axis('on')
 
 ```
 ## Output:
 
 ### Display the input Image
 
-![output](e1.png)
+![output](w1.png)
 
 ### Display the result of Opening
 
-![output](e2.png)
+![output](w2.png)
 
 ### Display the result of Closing
 
-![output](e3.png)
+![output](w3.png)
 
 ## Result
 Thus the Opening and Closing operation is used in the image using python and OpenCV.
